@@ -139,10 +139,8 @@ public class Main {
         int birthRate = 17; // на 1000 человек
         int deathRate = 8; // на 1000 человек
         int populationGrowthOnThousandPeople = birthRate - deathRate; // на 1000 человек
-        int howThousandsY = populationY / 1000;
-        int populationGrowth = populationGrowthOnThousandPeople * howThousandsY;
         for (int i = 1; i <= 10; i++) {
-            populationY = populationY + populationGrowth;
+            populationY = populationY + (populationY / 1000 * populationGrowthOnThousandPeople);
             System.out.println("Год " + i + ", численность населения составляет: " + populationY);
         }
     }
